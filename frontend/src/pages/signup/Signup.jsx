@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import GenderCheckbox from './GenderCheckbox';
-import useSignup from '../../hooks/useSignup'; // Import the hook correctly
+import useSignup from '../../hooks/useSignup';
 
 const Signup = () => {
   const [inputs, setInputs] = useState({
@@ -12,7 +12,7 @@ const Signup = () => {
     gender: ''
   });
 
-  const { loading, signup } = useSignup(); // Destructure loading and signup from the hook
+  const { loading, signup } = useSignup();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -29,8 +29,9 @@ const Signup = () => {
     }));
   };
 
-  const handleSubmit = async (e) => { // Make this function async
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("Form Inputs: ", inputs); // Debugging form data
     await signup(inputs); // Ensure signup is awaited
   };
 

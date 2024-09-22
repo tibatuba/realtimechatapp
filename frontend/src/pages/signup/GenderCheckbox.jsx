@@ -1,4 +1,3 @@
-// src/pages/signup/GenderCheckbox.jsx
 import React from 'react';
 
 const GenderCheckbox = ({ onCheckboxChange, selectedGender }) => {
@@ -9,7 +8,7 @@ const GenderCheckbox = ({ onCheckboxChange, selectedGender }) => {
           <span className='label-text'>Male</span>
           <input 
             type='radio' 
-            name='gender' // Use name attribute to group radio buttons
+            name='gender' 
             value='male'
             checked={selectedGender === 'male'}
             onChange={() => onCheckboxChange('male')}
@@ -22,7 +21,7 @@ const GenderCheckbox = ({ onCheckboxChange, selectedGender }) => {
           <span className='label-text'>Female</span>
           <input 
             type='radio'
-            name='gender' // Use name attribute to group radio buttons
+            name='gender'
             value='female'
             checked={selectedGender === 'female'}
             onChange={() => onCheckboxChange('female')}
